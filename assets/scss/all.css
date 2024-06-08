@@ -447,6 +447,23 @@ ul {
   color: #3B3B3B;
 }
 
+@media screen and (max-width: 768px) {
+  .footer .wrap {
+    padding: 40px 5px;
+  }
+  .footer-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-social {
+    width: 85%;
+    font-size: 20px;
+  }
+}
 .container {
   max-width: 1296px;
   padding: 0;
