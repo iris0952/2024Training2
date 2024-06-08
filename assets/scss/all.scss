@@ -1,0 +1,10 @@
+@import "base/normalize";  
+@import "base/base"; 
+
+//layout 的scss
+@import "layout/header";
+@import "layout/footer";
+
+//page 的scss
+@import "pages/index";
+@import "pages/porfolio";

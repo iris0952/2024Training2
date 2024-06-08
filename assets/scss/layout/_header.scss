@@ -1,0 +1,64 @@
+.navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    .topMenu{
+        list-style: none;
+        gap: 40px;
+        margin: 0 auto;
+    }
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    &.active, &:hover{
+        color: black;
+        font-weight: 600;
+    }
+    span{
+        position: relative;
+        display: block;
+        padding-right: 8px;
+        padding-left: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    &.active span::before, span:hover::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 1px solid #919191;
+        mask: conic-gradient(at 8px 8px, rgba(0, 0, 0, 0) 75%, #000 0) 0 0 / calc(100% - 8px) calc(100% - 8px), linear-gradient(#000 0 0) content-box;
+    }
+}
+.mobile-Menu{
+    display: none;
+}
+@media screen and (min-width: 350px){
+    .mobile-Menu{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        span{
+            height: 3px;
+            width: 30px;
+            background: black;
+            margin: 3px 4px;
+            border-radius: 5px;
+        }
+    }
+    .navbar .topMenu{
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .navbar .topMenu{
+        display: flex;
+    }
+    .mobile-Menu{
+        display: none;
+    }
+}
